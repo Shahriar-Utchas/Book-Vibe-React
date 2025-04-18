@@ -1,11 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
     const links = <>
-        <li className="m-2">Home</li>
-        <li className="m-2">about</li>
-        <li className="m-2">ReadList</li>
+        <NavLink
+            to="/"
+            className={({ isActive }) =>
+                `m-2 px-4 py-2 rounded-lg transition duration-300 
+    ${isActive ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-blue-100 hover:text-blue-700'}`
+            }
+        >
+            Home
+        </NavLink>
+
+        <NavLink
+            to="/listedBooks"
+            className={({ isActive }) =>
+                `m-2 px-4 py-2 rounded-lg transition duration-300 
+    ${isActive ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-blue-100 hover:text-blue-700'}`
+            }
+        >
+            Listed Books
+        </NavLink>
+
     </>
     return (
         <div>

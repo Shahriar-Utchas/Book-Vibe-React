@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Banner = () => {
     return (
@@ -8,7 +9,7 @@ const Banner = () => {
                 <p className="font-bold text-3xl md:text-4xl lg:text-5xl">
                     Books to freshen up your bookshelf
                 </p>
-                <button className="btn btn-accent mt-4">View The List</button>
+                <Link to ='/ListedBooks'><button className="btn btn-accent mt-4">View The List</button></Link>
             </div>
 
             {/* Image */}

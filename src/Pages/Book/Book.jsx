@@ -1,13 +1,14 @@
 import React from 'react';
-import { FaRegStar } from 'react-icons/fa'; // Make sure react-icons is installed
+import { FaRegStar } from 'react-icons/fa';
 import { Link } from 'react-router';
 
 const Book = ({ book }) => {
     const { bookId, bookName, author, image, tags, rating, category } = book;
 
     return (
-        <Link to={`/bookDetails/${bookId}`} >
-            <div className="card bg-base-200 shadow-md border p-4 rounded-xl space-y-3 m-5">
+        <Link to={`/bookDetails/${bookId}`}>
+            <div className="card bg-base-200 shadow-md border p-4 rounded-xl space-y-3 m-5 
+                            transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                 {/* Book Image */}
                 <figure className="bg-base-300 p-6 rounded-xl">
                     <img src={image} alt={bookName} className="h-40 object-contain mx-auto" />
