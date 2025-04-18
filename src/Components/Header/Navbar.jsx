@@ -1,6 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Navbar = () => {
+    const links = <>
+        <li className="m-2">Home</li>
+        <li className="m-2">about</li>
+        <li className="m-2">ReadList</li>
+    </>
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm px-4">
@@ -14,22 +20,14 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
-                            <li><a className="text-green-600 border border-green-500 rounded-md">Home</a></li>
-                            <li><a>Listed Books</a></li>
-                            <li><a>Pages to Read</a></li>
+                            {links}
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl font-bold">Book Vibe</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-base font-medium">
-                        <li>
-                            <a className="text-green-600 border border-green-500 px-4 rounded-md hover:bg-green-50">
-                                Home
-                            </a>
-                        </li>
-                        <li><a>Listed Books</a></li>
-                        <li><a>Pages to Read</a></li>
+                        {links}
                     </ul>
                 </div>
                 <div className="navbar-end space-x-2">

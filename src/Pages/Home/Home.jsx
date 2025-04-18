@@ -8,7 +8,9 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Books data={data}></Books>
+            <Suspense fallback={<div className='text-center text-2xl'>Loading...</div>}>
+                <Books data={data}></Books>
+            </Suspense>
         </div>
     );
 };
