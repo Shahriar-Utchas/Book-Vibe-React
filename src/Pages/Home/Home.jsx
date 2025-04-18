@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Banner from '../../Components/Banner/Banner';
 import Books from '../Books/Books';
+import { useLoaderData } from 'react-router';
 
 const Home = () => {
+    const data = useLoaderData();
     return (
         <div>
             <Banner></Banner>
-            <Books></Books>
+            <Books data={data}></Books>
         </div>
     );
 };
